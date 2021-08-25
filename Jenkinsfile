@@ -13,7 +13,8 @@ pipeline{
 			}
 		}
 
-
+/*
+CNB: SONARQUBE DOES NOT WORK 
 		stage('Sonarqube') {
 			environment {
 				scannerHome = tool 'SonarQubeScanner'
@@ -25,6 +26,7 @@ pipeline{
 				echo "SonarQube check completed"
 			}
 		}
+*/
 
 	}	
 }
