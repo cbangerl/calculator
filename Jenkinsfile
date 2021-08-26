@@ -30,6 +30,17 @@ CNB: SONARQUBE DOES NOT WORK
 			}
 		}
 */
+		stage("Package"){
+			steps{
+				sh "./gradlew build"
+			}
+		
+		}
+		stage("Docker build"){
+			steps{
+				sh "docker build -t chrisbanner87/calculator . "
+			}
+		}
 
 	}	
 }
