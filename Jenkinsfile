@@ -37,7 +37,6 @@ CNB: SONARQUBE DOES NOT WORK
 		
 		}
 
-/* CNB: docker command does not work atm inside docker
 		stage("Docker build"){
 			steps{
 				sh "docker build -t chrisbanner87/calculator . "
@@ -50,7 +49,6 @@ CNB: SONARQUBE DOES NOT WORK
 				sh "docker push chrisbanner87/calculator:1
 			}
 		}
-*/
 
 	}	
 }
