@@ -30,17 +30,27 @@ CNB: SONARQUBE DOES NOT WORK
 			}
 		}
 */
-		stage("Package"){
+		stage("package"){
 			steps{
 				sh "./gradlew build"
 			}
 		
 		}
+
+/* CNB: docker command does not work atm inside docker
 		stage("Docker build"){
 			steps{
 				sh "docker build -t chrisbanner87/calculator . "
 			}
 		}
+		
+		stage("Docker push"){
+			steps{
+				sh "docker login --username chrisbanner87 --password 9uxupEB6EYCLK9rR0tZe"
+				sh "docker push chrisbanner87/calculator:1
+			}
+		}
+*/
 
 	}	
 }
