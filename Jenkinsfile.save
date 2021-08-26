@@ -1,9 +1,7 @@
 pipeline{
 	agent any
-	triggers {
-		pollSCM('* * * * *')
-	}
-	stages{
+	
+stages{
 		stage("compile"){
 			steps{
 				sh "./gradlew compileJava"
@@ -17,7 +15,7 @@ pipeline{
 		}
 
 /*
-CNB: SONARQUBE DOES NOT WORK  
+CNB: SONARQUBE DOES NOT WORK 
 		stage('Sonarqube') {
 			environment {
 				scannerHome = tool 'SonarQubeScanner'
