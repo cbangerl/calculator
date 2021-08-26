@@ -39,7 +39,8 @@ CNB: SONARQUBE DOES NOT WORK
 
 		stage("Docker build"){
 			steps{
-				sh "sudo docker build -t chrisbanner87/calculator ."
+				sh "sudo docker build -t calculator ."
+				sh "sudo docker tag calculator chrisbanner87/calculator:1"
 			}
 		}
 		
