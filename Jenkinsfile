@@ -39,14 +39,14 @@ CNB: SONARQUBE DOES NOT WORK
 
 		stage("Docker build"){
 			steps{
-				sh "docker build -t chrisbanner87/calculator . "
+				sh "sudo docker build -t chrisbanner87/calculator ."
 			}
 		}
 		
 		stage("Docker push"){
 			steps{
-				sh "docker login --username chrisbanner87 --password 9uxupEB6EYCLK9rR0tZe"
-				sh "docker push chrisbanner87/calculator:1
+				sh "sudo docker login --username chrisbanner87 --password 9uxupEB6EYCLK9rR0tZe"
+				sh "sudo docker push chrisbanner87/calculator:1
 			}
 		}
 
