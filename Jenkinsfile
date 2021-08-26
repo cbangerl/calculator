@@ -46,7 +46,7 @@ CNB: SONARQUBE DOES NOT WORK
 		stage("Docker push"){
 			steps{
 				sh "sudo docker login --username chrisbanner87 --password 9uxupEB6EYCLK9rR0tZe"
-				sh "sudo docker push chrisbanner87/calculator:1
+				sh "sudo docker push chrisbanner87/calculator:1"
 			}
 		}
 
